@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <title>Proyecto 3</title>
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-dark bg-dark text-dark">
+        <a href="#"><img class="h-8 w-auto sm:h-10" src="./images/iconocovid.jpg" alt="" width="50" height="50"></a>
+        <a class="navbar-brand center" href="#"> PROYECTO 3-EQUIPO 1:DATOS COVID-19 </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+            aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <!--Fin Header-->
+    <br>
+    <br>
+
+    <div class="input-group mb-4">
+        <div class="input-group-prepend bg-secondary">
+            <span class="input-group-text" id="">Fecha Inicio:</span>
+        </div>
+        <input type="date" id="fechaInicio" class="form-control" min="2019-11-01">
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="">Fecha Fin:</span>
+        </div>
+        <input type="date" id="fechaFin" class="form-control" min="2019-11-01">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="pais">Pais:</label>
+        </div>
+        <select class="custom-select" id="pais">
+            
+        </select>
+    </div>
+
+    </div>
+    <div class="col-md-12 text-center"">
+        <button class=" btn btn-outline-secondary" type="submit" onclick="doCharts()">Consultar</button>
+    </div>
+
+
+    <div class="container">
+        <div class="row my-3">
+            <div class="col">
+                
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="acumulado" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="distCasos" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="distMuertes" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="recuperados" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="front.js"></script>
+<script src="doCharts.js"></script>
+
+</html>
+
